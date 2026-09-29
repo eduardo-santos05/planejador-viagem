@@ -62,6 +62,9 @@ do {
         case '0':
             console.log('Saindo do planejador. Até logo!')
             break
+        default:
+            console.log('Opção inválida!')
+            break
     }
 } while(opcao !== '0')
 
