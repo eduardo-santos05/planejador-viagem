@@ -59,6 +59,9 @@ do {
             let conversaoRealDolar = (valorReais / cotacaoDolar).toFixed(2)
             console.log(`R$ ${valorReais} equivalem a US$ ${conversaoRealDolar}`)
             break
+        case '0':
+            console.log('Saindo do planejador. Até logo!')
+            break
     }
 } while(opcao !== '0')
 
