@@ -12,12 +12,17 @@ function exibirMenu() {
 }
 
 let opcao = ''
+
 let distanciaViagem
 let consumoCarro
 let precoPorLitro
 let velocidadeMedia
+
 let totalDespesas
 let numeroPessoas
+
+let valorReais
+let cotacaoDolar
 
 do {
     exibirMenu()
@@ -47,6 +52,12 @@ do {
             }
             let precoPorPessoa = (totalDespesas / numeroPessoas).toFixed(2)
             console.log('Cada pessoa paga: R$ ' + precoPorPessoa)
+            break
+        case '4':
+            valorReais = (Number(prompt('Informe o valor em reais (R$): '))).toFixed(2)
+            cotacaoDolar = (Number(prompt('Informe a cotação do dólar (R$): '))).toFixed(2)
+            let conversaoRealDolar = (valorReais / cotacaoDolar).toFixed(2)
+            console.log(`R$ ${valorReais} equivalem a US$ ${conversaoRealDolar}`)
             break
     }
 } while(opcao !== '0')
