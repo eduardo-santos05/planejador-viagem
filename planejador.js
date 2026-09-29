@@ -12,6 +12,10 @@ function exibirMenu() {
 }
 
 let opcao = ''
+let distanciaViagem
+let consumoCarro
+let precoPorLitro
+let velocidadeMedia
 
 do {
     exibirMenu()
@@ -19,13 +23,20 @@ do {
 
     switch (opcao) {
         case '1':
-            let distanciaViagem = Number(prompt('Informe a distância da viagem (km): '))
-            let consumoCarro = Number(prompt('Informe o consumo do carro (km/L): '))
-            let precoPorLitro = Number(prompt('Informe o preço do litro (R$): '))
+            distanciaViagem = Number(prompt('Informe a distância da viagem (km): '))
+            consumoCarro = Number(prompt('Informe o consumo do carro (km/L): '))
+            precoPorLitro = Number(prompt('Informe o preço do litro (R$): '))
             let litrosGastosPorViagem = distanciaViagem / consumoCarro
             let custo = (litrosGastosPorViagem * precoPorLitro).toFixed(2)
             console.log('Custo estimado do combustível: R$ ' + custo)
             break
+        case '2':
+            distanciaViagem = Number(prompt('Informe a distância da viagem (km): '))
+            velocidadeMedia = Number(prompt('Informe a velocidade média (km/h): '))
+            let tempoEstimadoViagem = distanciaViagem/velocidadeMedia
+            console.log('Tempo estimado de viagem: ' + tempoEstimadoViagem + ' horas')
+            break
+        
     }
 } while(opcao !== '0')
 
