@@ -16,6 +16,8 @@ let distanciaViagem
 let consumoCarro
 let precoPorLitro
 let velocidadeMedia
+let totalDespesas
+let numeroPessoas
 
 do {
     exibirMenu()
@@ -36,7 +38,12 @@ do {
             let tempoEstimadoViagem = distanciaViagem/velocidadeMedia
             console.log('Tempo estimado de viagem: ' + tempoEstimadoViagem + ' horas')
             break
-        
+        case '3':
+            totalDespesas = Number(prompt('Informe o total de despesas (R$): '))
+            numeroPessoas = Number(prompt('Informe o número de pessoas: '))
+            let precoPorPessoa = (totalDespesas / numeroPessoas).toFixed(2)
+            console.log('Cada pessoa paga: R$ ' + precoPorPessoa)
+            break
     }
 } while(opcao !== '0')
 
