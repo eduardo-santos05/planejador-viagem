@@ -16,4 +16,16 @@ let opcao = ''
 do {
     exibirMenu()
     opcao = prompt('Escolha uma opção: ')
+
+    switch (opcao) {
+        case '1':
+            let distanciaViagem = Number(prompt('Informe a distância da viagem (km): '))
+            let consumoCarro = Number(prompt('Informe o consumo do carro (km/L): '))
+            let precoPorLitro = Number(prompt('Informe o preço do litro (R$): '))
+            let litrosGastosPorViagem = distanciaViagem / consumoCarro
+            let custo = (litrosGastosPorViagem * precoPorLitro).toFixed(2)
+            console.log('Custo estimado do combustível: R$ ' + custo)
+            break
+    }
 } while(opcao !== '0')
+
