@@ -45,7 +45,7 @@ do {
             break
         case '3':
             totalDespesas = Number(prompt('Informe o total de despesas (R$): '))
-            numeroPessoas = Number(prompt('Informe o número de pessoas: '))
+            numeroPessoas = (parseInt(prompt('Informe o número de pessoas: ')))
             if (numeroPessoas <= 0) {
                 console.log('O número de pessoas precisa ser maior que 0.')
                 continue
